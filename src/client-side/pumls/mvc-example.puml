@@ -1,0 +1,23 @@
+@startuml
+class UserView {
+    - void render(UserModel userModel)
+}
+note bottom of UserView: receive model changed event and \n update withe render
+note top of UserView: emit UI event 
+
+class UserController {
+    - void onUIEvent()
+}
+note bottom of UserController: receive UI event from view, \n call businuess logic of model
+
+class UserModel {
+    + void doBusiness()
+}
+note bottom of UserModel: emit event when model changed
+
+UserController -> UserModel
+UserController -> UserView
+UserView -> UserModel
+
+
+@enduml

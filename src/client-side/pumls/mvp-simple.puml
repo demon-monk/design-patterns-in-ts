@@ -1,0 +1,14 @@
+@startuml
+class View {
+
+}
+class Presenter {
+
+}
+class Model {
+    
+}
+Presenter -> View
+Presenter -> Model
+
+@enduml

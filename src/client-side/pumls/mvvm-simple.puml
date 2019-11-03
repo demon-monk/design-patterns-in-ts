@@ -1,0 +1,14 @@
+@startuml
+class View {
+
+}
+class ViewModel {
+
+}
+class Model {
+    
+}
+ViewModel -> View
+ViewModel -> Model
+
+@enduml
